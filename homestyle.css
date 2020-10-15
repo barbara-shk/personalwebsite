@@ -1,0 +1,170 @@
+body {
+background-color: #151515;
+color: #FF8181;
+font-family: 'Playfair Display', serif;
+
+}
+.everything {
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1px 2fr;
+    grid-template-areas:
+    "logo brb brb" 
+    "divider divider divider"
+    "mainblock mainblock creativity";
+
+}
+.creativity {
+    background-image: url(./anneezero/assets/img/creativity.png);
+    background-size: cover;
+    grid-area: creativity;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.logo {
+    grid-area: logo;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.brb {
+    grid-area: brb;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 131px;
+    -webkit-text-stroke: 0.5px rgba(255,129,129,1);
+    color:rgba(255,129,129,0);
+}
+.mainblock {
+    grid-area: mainblock;
+    display:block;
+    place-self: center start;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 150.8%;
+    color: #E5E4E9;
+    padding-left:5em;
+
+}
+.mainblock ul{
+    list-style: none;
+}
+#circle { position: relative; width: 100%; padding-bottom: 200px; overflow: visible; }
+
+#circle text {
+    font-family: 'Titillium Web', sans-serif; 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size:1.7em;
+    font-weight:700;
+    position: fixed;
+    transition: 0.5% ease-out;
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.6);
+    color:rgba(255, 255, 255,0);
+    
+}
+
+#circle svg { position: absolute; left: 0; top: 0; width: 100%; height: 300px;
+
+  -webkit-animation-name: rotate;
+     -moz-animation-name: rotate;
+      -ms-animation-name: rotate;
+       -o-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 8s;
+     -moz-animation-duration: 8s;
+      -ms-animation-duration: 8s;
+       -o-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-timing-function: linear;
+      -ms-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+
+}
+
+@-webkit-keyframes rotate {
+    from { -webkit-transform: rotate(0); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes rotate {
+    from { -moz-transform: rotate(0); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-ms-keyframes rotate {
+    from { -ms-transform: rotate(0); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-o-keyframes rotate {
+    from { -o-transform: rotate(0); }
+    to { -o-transform: rotate(360deg); }
+}
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+.iconify { 
+    color: rgb(255,129,129,1);
+    margin-bottom:-10px;
+    font-size:2em;
+
+}
+.arrow {
+    color: rgb(255,129,129,1);
+    margin:0px 5px -5px 5px ;
+    font-size:1.3em;
+    
+}
+
+@media screen and (max-width: 768px) {
+.everything{ 
+    grid-template-rows: 1fr 3fr 4fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "brb logo" 
+    "mainblock mainblock"
+    "creativity creativity";
+}
+.creativity {
+/*    display:none;*/
+}
+.mainblock {
+    display:block;
+    font-size: 1.5em;
+    padding:2em;
+    justify-content: normal;
+
+}
+/*.logo{
+    display:none;
+}*/
+.brb{
+    width:75vw;
+    font-size: 6em;
+    padding:0;
+    display:block;
+    justify-content: normal;
+    margin: auto;
+}
+#circle { position: relative; width: 100%; margin-left: -200px; overflow: visible; }
+
+.iconify { 
+    color: rgb(255,129,129,1);
+    margin-bottom:-5px;
+    font-size:1em;
+    }
+}
