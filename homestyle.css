@@ -168,3 +168,14 @@ font-family: 'Playfair Display', serif;
     font-size:1em;
     }
 }
+a{
+    text-decoration: none;
+    color: rgb(255,129,129,1);
+    font-weight: bolder;
+    transition: 0.4s;
+}
+a:hover{
+    color: rgb(229,228,233,1);
+}
+.preview { display: none; transition: 0.3s;}
+.anneezeropreview:hover .preview { display: inline-block; position: absolute; transition: 0.5s;}
