@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles-sm.css" media="(max-width: 575.98px)" />
+    <title>Année 0 - Bobbay's Blogging</title>
+</head>
+<body class="page-top">
+            <!-- Masthead-->
+            <header class="cd-header">
+                <div class="header-wrapper">
+                    <div class="logo-wrap container">
+                        <a class="navbar-brand js-scroll-trigger" href="#page-top">2020 année 0</a><span class="catchphrase">// from designer to developer</span>
+                    </div>
+                    <div class="nav-but-wrap">
+                        <div class="menu-icon hover-target">
+                            <span class="menu-icon__line menu-icon__line-left"></span>
+                            <span class="menu-icon__line"></span>
+                            <span class="menu-icon__line menu-icon__line-right"></span>
+                        </div>					
+                    </div>					
+                </div>				
+            </header>
+        
+            <div class="nav">
+                <div class="nav__content">
+                    <ul class="nav__list">
+                        <li class="nav__list-item"><a href="../index.html" class="hover-target">home</a></li>
+                        <li class="nav__list-item active-nav"><a href="./index.html" class="hover-target">blog</a></li>
+                        <li class="nav__list-item"><a href="../resume.html" class="hover-target">resume</a></li>
+                        <li class="nav__list-item"><a href="../shop/" class="hover-target">shop</a></li>
+                        <li class="nav__list-item"><a href="../contact.html" class="hover-target">contact</a></li>                    </ul>
+                </div>
+            </div>		
+<!--Body Content-->    
+    <h1 style="font-weight: 900; margin-top: 50vh;" class="text-center">Let's Talk About Code</h1>
+
+        <!--Socials-->
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+<!-- Footer-->
+<footer class="footer bg-black small text-center text-primary" style="position: absolute;bottom: 6px;"><div class="container">(c) 2020 - barbara sahok
+    Web development and bubble tea consultancy- hire me</div></footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+
+
+<script>var app = function () {
+var body = undefined;
+var menu = undefined;
+var menuItems = undefined;
+var init = function init() {
+    body = document.querySelector('body');
+    menu = document.querySelector('.menu-icon');
+    menuItems = document.querySelectorAll('.nav__list-item');
+    applyListeners();
+};
+var applyListeners = function applyListeners() {
+    menu.addEventListener('click', function () {
+        return toggleClass(body, 'nav-active');
+    });
+};
+var toggleClass = function toggleClass(element, stringClass) {
+    if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+};
+init();
+}();
+</script>
+</body>
+</html>
