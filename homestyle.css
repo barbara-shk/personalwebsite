@@ -51,7 +51,7 @@ font-family: 'Playfair Display', serif;
     font-size: 1.5em;
     line-height: 150.8%;
     color: #E5E4E9;
-    padding-left:5em;
+    padding:0 2em 0 5em;
 
 }
 .mainblock ul{
@@ -119,9 +119,8 @@ font-family: 'Playfair Display', serif;
 }
 .iconify { 
     color: rgb(255,129,129,1);
-    margin-bottom:-10px;
-    font-size:2em;
-
+    margin-bottom:-5px;
+    font-size:1.2em;
 }
 .arrow {
     color: rgb(255,129,129,1);
@@ -158,12 +157,6 @@ font-family: 'Playfair Display', serif;
     margin: auto;
 }
 #circle { position: relative; width: 100%; margin-left: -200px; overflow: visible; }
-
-.iconify { 
-    color: rgb(255,129,129,1);
-    margin-bottom:-5px;
-    font-size:1em;
-    }
 }
 a{
     text-decoration: none;
@@ -174,5 +167,16 @@ a{
 a:hover{
     color: rgb(229,228,233,1);
 }
-.preview { display: none; transition: 0.3s;}
-.anneezeropreview:hover .preview { display: inline-block; position: absolute; transition: 0.5s;}
+.preview { margin-top:-10em; display: none; transition: 0.3s;}
+.anneezeropreview{ 
+    text-decoration: none;
+    color: rgb(255,129,129,1);
+    font-weight: bolder;
+    transition: 0.4s;}
+.anneezeropreview:hover .preview {
+    display: inline-block; position: absolute; transition: 0.5s;
+}
+
+ul {
+line-height: 200%;
+}
