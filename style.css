@@ -4,26 +4,28 @@ color: #FF8181;
 font-family: 'Playfair Display', serif;
 
 }
-.everything {
+.main-container {
     height:100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 1px 2fr;
+    grid-template-rows: 90vh 100vh;
     grid-template-areas:
     "logo brb brb" 
-    "divider divider divider"
     "mainblock mainblock creativity";
 
 }
 .creativity {
-    background-image: url(./anneezero/assets/img/creativity.png);
-    background-size: cover;
+    background-image: url(./anneezero/assets/img/creativity-vector.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* 
+    background-position-y: -100px; */
     grid-area: creativity;
     display:flex;
     justify-content: space-around;
     align-items:center;
 }
-.logo {
+.logo-container {
     grid-area: logo;
     display:flex;
     justify-content: space-around;
@@ -35,11 +37,37 @@ font-family: 'Playfair Display', serif;
     justify-content: space-around;
     align-items:center;
     font-family: Playfair Display;
-    font-style: normal;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 131px;
-    -webkit-text-stroke: 0.5px rgba(255,129,129,1);
-    color:rgba(255,129,129,0);
+/*     -webkit-text-stroke: 0.5px rgba(255,129,129,1); */
+    color:#151515;
+    text-shadow:
+    -0.5px -0.5px 0 #fcedd8,
+     0   -0.5px 0 #fcedd8,
+     0.5px -0.5px 0 #fcedd8,
+     0.5px  0   0 #fcedd8,
+     0.5px  0.5px 0 #fcedd8,
+     0    0.5px 0 #fcedd8,
+    -0.5px  0.5px 0 #fcedd8,
+    -0.5px  0   0 #fcedd8;
+    transition: 1s;
+    animation: alternate;
+
+}
+.brb:hover{
+    -webkit-text-stroke: 0;
+    color:#fcedd8;
+    text-shadow: 1px 1px 0px #eb452b, 
+    3px 3px 0px #efa032, 
+    5px 5px 0px #46b59b, 
+    7px 7px 0px #017e7f, 
+    9px 9px 0px #052939, 
+    11px 11px 0px #FF8181, 
+    13px 13px 0px #FF8181, 
+    15px 15px 0px #FF8181, 
+    17px 17px 0px #FF8181;
+    transition: 1s;
+    animation: alternate;
 }
 .mainblock {
     grid-area: mainblock;
@@ -121,6 +149,7 @@ font-family: 'Playfair Display', serif;
     color: rgb(255,129,129,1);
     margin-bottom:-5px;
     font-size:1.2em;
+    transition: 0.4s;
 }
 .arrow {
     color: rgb(255,129,129,1);
@@ -129,14 +158,43 @@ font-family: 'Playfair Display', serif;
     
 }
 
+a{
+    text-decoration: none;
+    color: rgb(255,129,129,1);
+    font-weight: bolder;
+    transition: 0.4s;
+}
+a:hover{
+    color: rgb(229,228,233,1);
+}
+.iconify:hover{
+    color: rgb(229,228,233,1);
+}
+.preview { margin-top:-10em; display: none; transition: 0.3s;}
+.anneezeropreview{ 
+    text-decoration: none;
+    color: rgb(255,129,129,1);
+    font-weight: bolder;
+    transition: 0.4s;}
+.anneezeropreview:hover .preview {
+    display: inline-block; position: absolute; transition: 0.5s;
+}
+
+ul {
+line-height: 200%;
+}
+
+/* MEDIA QUERIES */
+
+
 @media screen and (max-width: 768px) {
-.everything{ 
+.main-container{ 
     grid-template-rows: 1fr 3fr 4fr;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    "brb logo" 
-    "mainblock mainblock"
-    "creativity creativity";
+    "brb" 
+    "mainblock"
+    "creativity";
 }
 .mainblock {
     display:block;
@@ -158,25 +216,4 @@ font-family: 'Playfair Display', serif;
 }
 #circle { position: relative; width: 100%; margin-left: -200px; overflow: visible; }
 }
-a{
-    text-decoration: none;
-    color: rgb(255,129,129,1);
-    font-weight: bolder;
-    transition: 0.4s;
-}
-a:hover{
-    color: rgb(229,228,233,1);
-}
-.preview { margin-top:-10em; display: none; transition: 0.3s;}
-.anneezeropreview{ 
-    text-decoration: none;
-    color: rgb(255,129,129,1);
-    font-weight: bolder;
-    transition: 0.4s;}
-.anneezeropreview:hover .preview {
-    display: inline-block; position: absolute; transition: 0.5s;
-}
 
-ul {
-line-height: 200%;
-}

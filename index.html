@@ -10,11 +10,12 @@
 
     gtag('config', 'UA-180724243-1');
     </script>
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbara Sahok - Creative Creator - Design & Development</title>
-    <link rel="stylesheet" href="./homestyle.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./anneezero/assets/img/favicon.ico" />
         <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css2?amily=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -25,8 +26,11 @@
     
 </head>
 <body>
-    <div class="everything">
-        <div class="logo">
+    <!-- START CONTAINER -->
+    <div class="main-container">
+
+        <!-- START LOGO -->
+        <div class="logo-container">
             <div id="circle">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
                     <defs>
@@ -40,18 +44,21 @@
                     <g>
                         <use xlink:href="#circlePath" fill="none"/>
                         <text fill="#E5E4E9">
-                            <textPath xlink:href="#circlePath">Hello, I'm Barbara - nice to meet you -</textPath>
+                            <textPath xlink:href="#circlePath">Hello, I'm Barbara - content creator -</textPath>
                         </text>
                     </g>
                 </svg>
                 </div>
-
-
-
         </div>
-        <h1 class="brb">I’ll be right there...</h1>
+        <!-- END LOGO -->
+        <!-- START HEADING -->
+        <h1 class="brb">How &nbsp you &nbsp doin'?<br></h1>
+        <!-- END HEADING -->
+        <!-- START CONTENT -->
+        
         <div class="mainblock"><strong>
-            J’arrive tout de suite, mais pour le moment vous pouvez : </strong>
+            <p class="contentText">J’arrive tout de suite,
+                mais pour le moment vous pouvez : </p></strong>
             <ul>
                 <li>
                     <span class="iconify arrow" data-icon="eva:arrow-forward-outline"></span>m’envoyer un DM, 
@@ -60,23 +67,59 @@
                     <a href="https://www.linkedin.com/in/barbarasahok/" target="_blank"><span class="iconify" data-icon="ant-design:linkedin-filled" data-inline="false"></span></a>
                     <a href="https://github.com/barbara-shk" target="_blank"><span class="iconify" data-icon="ant-design:github-outlined" data-inline="false"></span></a>
                 </li>
-
+                
                 <li>
                     <span class="iconify arrow" data-icon="eva:arrow-forward-outline"></span>ou un mail,
                     <a href="mailto:contact.barbarashk@gmail.com"><span class="iconify" data-icon="eva:at-outline" data-inline="false"></span></a>
                 </li>
-
+                
                 <li>
                     <span class="iconify arrow" data-icon="eva:arrow-forward-outline"></span>ou en lire un peu plus sur mes <a href="https://app.assessfirst.com/_/profile/lou00rbk-barbara-sahok" target="_blank"> soft skills</a>,
                 </li>
-
+                
                 <li>
                     <span class="iconify arrow" data-icon="eva:arrow-forward-outline"></span>ou calculer votre <a href="/" target="_blank">signe astrologique</a>
                 </li>
             </ul>
         </div>
+        <!-- END CONTENT -->
+
+        <!-- START IMG -->
         <div class="creativity"></div>
+        <!-- END IMG -->
     </div>
+    <!-- END CONTAINER -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script>
+        // Wrap every letter in a span
+var textWrapper = document.querySelector('.brb');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+var contentTextWrapper = document.querySelector('.contentText');
+contentTextWrapper.innerHTML = contentTextWrapper.textContent.replace(/\S/g, "<span class='letterContent'>$&</span>");
+
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.brb .letter',
+    translateY: [-500,0],
+    easing: "easeInOutSine",
+    duration: 1400,
+    delay: (el, i) => 30 * i
+  }).add({
+    targets: '.brb',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+/* $(".letterContent").hover(function(){
+    $(this).animate({ fontSize: "115%" });
+}, function() {
+    $(this).animate({ fontSize: "100%" });
+}); */
+    </script>
 </body>
 
 
