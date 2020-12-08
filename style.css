@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Titillium+Web&display=swap');
+
+:root {
+    --salmon: #FF8181;
+    --lightgrey: #fcedd8;
+    --darkgrey: #151515;
+  }
+  
 body {
 background-color: #151515;
-color: #FF8181;
+color: var(--salmon);
 font-family: 'Playfair Display', serif;
-
 }
 .main-container {
     height:100vh;
@@ -63,10 +70,10 @@ font-family: 'Playfair Display', serif;
     5px 5px 0px #46b59b, 
     7px 7px 0px #017e7f, 
     9px 9px 0px #052939, 
-    11px 11px 0px #FF8181, 
-    13px 13px 0px #FF8181, 
-    15px 15px 0px #FF8181, 
-    17px 17px 0px #FF8181;
+    11px 11px 0px var(--salmon), 
+    13px 13px 0px var(--salmon), 
+    15px 15px 0px var(--salmon), 
+    17px 17px 0px var(--salmon);
     transition: 1s;
     animation: alternate;
 }
@@ -147,13 +154,13 @@ font-family: 'Playfair Display', serif;
     to { transform: rotate(360deg); }
 }
 .iconify { 
-    color: rgb(255,129,129,1);
+    color: var(--salmon);
     margin-bottom:-5px;
     font-size:1.2em;
     transition: 0.4s;
 }
 .arrow {
-    color: rgb(255,129,129,1);
+    color: var(--salmon);
     margin:0px 5px -5px 5px ;
     font-size:1.3em;
     
@@ -161,7 +168,7 @@ font-family: 'Playfair Display', serif;
 
 a{
     text-decoration: none;
-    color: rgb(255,129,129,1);
+    color: var(--salmon);
     font-weight: bolder;
     transition: 0.4s;
 }
@@ -174,7 +181,7 @@ a:hover{
 .preview { margin-top:-10em; display: none; transition: 0.3s;}
 .anneezeropreview{ 
     text-decoration: none;
-    color: rgb(255,129,129,1);
+    color: var(--salmon);
     font-weight: bolder;
     transition: 0.4s;}
 .anneezeropreview:hover .preview {
@@ -222,37 +229,97 @@ line-height: 200%;
 .projects{
     grid-area: projects;
 }
-.projectslinks{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.grid {
+	position: relative;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
 }
-.projectslinks img{
-    margin: 0.6em;
-    max-width: 60vw;
-    min-width: 15vw;
+/* GALLERY */
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	background: var(--salmon);
+	text-align: center;
+	cursor: pointer;
 }
-.projectslinks img:hover {
-    opacity:0.3;
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
 }
-/* figcaption{
-	position: relative;	
-    top: -50%;
-    z-index: 100;
-    text-align: center;
-    opacity: 0;
-    transition: ease-in-out;
-} */
-.projecth1{
-    text-align: center;
+
+.grid figure figcaption {
+	padding: 2em;
+	color: var(--lightgrey);
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-family: 'Titillium Web';
 }
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
 figure.effect-sarah {
-	background: #42b078;
+	background: var(--salmon);
 }
 
 figure.effect-sarah img {
-/* 	max-width: none; */
+	max-width: none;
 	width: -webkit-calc(100% + 20px);
 	width: calc(100% + 20px);
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
